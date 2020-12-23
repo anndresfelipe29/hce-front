@@ -19,4 +19,4 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         args: The ${{ github.event_name }} event triggered first step.
-        message: Hola ha ocurrido un ${{ github.event_name }} en el commit ${{commit.sha}} y ${{commit.ref}} 
+        message: Hola en ${{github.repository}} ha ocurrido un ${{ github.event_name }} en el commit ${{github.sha}} y ${{github.ref}} 
