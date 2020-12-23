@@ -1,20 +1,21 @@
-name: Actions notify
-
-on:
+name: telegram message
+on: 
   push:
     branches:
       - master
       - develop
   pull_request:
     types: [opened, synchronize, reopened]
-# desde aca es de notify telegram
 jobs:
-  notify:
-    runs-on: ubuntu-latest # self-hosted
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
     steps:
-      - uses: yanzay/notify-telegram@v0.1.0
-        if: always()
-        with:
-          chat: ${{ secrets.CHAT }} # user id or channel name secret
-          token: ${{ secrets.TOKEN }} # token secret
-          status: ${{ job.status }} # do not modify this line
+    - uses: actions/checkout@master
+    - name: send custom message with args
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        args: The ${{ github.event_name }} event triggered first step.
