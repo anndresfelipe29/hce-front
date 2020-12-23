@@ -1,4 +1,4 @@
-name: telegram message
+name: bot telegram
 on: 
   push:
     branches:
@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: send custom message with args
+    - name: envio de mensaje
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        # args: The ${{ github.event_name }} event triggered first step.
-        message: send photo message
+        args: The ${{ github.event_name }} event triggered first step.
+        message: Hola en ${{repo}} ha ocurrido un ${{ github.event_name }} en el commit ${{commit.sha}} y ${{commit.ref}} 
