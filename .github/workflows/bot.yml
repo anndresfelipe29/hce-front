@@ -7,7 +7,7 @@ on:
       - develop
   pull_request:
     types: [opened, synchronize, reopened]
-#desde aca es de notify telegram
+# desde aca es de notify telegram
 - uses: yanzay/notify-telegram@v0.1.0
       if: always()
       with:
