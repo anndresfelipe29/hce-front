@@ -10,7 +10,7 @@ on:
 # desde aca es de notify telegram
 jobs:
   notify:
-  runs-on: ubuntu-latest # self-hosted
+    runs-on: ubuntu-latest # self-hosted
     steps:
       - uses: yanzay/notify-telegram@v0.1.0
         if: always()
