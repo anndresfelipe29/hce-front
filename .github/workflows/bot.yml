@@ -19,4 +19,4 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         # args: The ${{ github.event_name }} event triggered first step.
-        message: ${{github.sha}}':' Hola, el usuario ${{ github.actor }} ha ejetutado una acción, en el repositorio ${{github.repository}} generando un ${{ github.event_name }} es el commit ${{github.run_number}}
+        message: ${{github.sha}} => Hola, el usuario **${{ github.actor }}** ha ejecutado una acción, en el repositorio **${{github.repository}}** generando un **${{ github.event_name }}** es el commit **${{github.run_number}}**
