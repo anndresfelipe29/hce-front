@@ -1,1 +1,16 @@
-<p>login works!</p>
+<p>
+    <mat-form-field appearance="legacy">
+      <mat-label>User</mat-label>
+      <input matInput placeholder="Usuario" id="usuario">
+    </mat-form-field>
+</p>
+<p>
+    <mat-form-field appearance="legacy">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password':'text'" id="password"> 
+    </mat-form-field>
+</p>
+<p>
+    <button mat-raised-button color="primary" (click)=clickAceptar()>Aceptar</button>
+    <button mat-raised-button color="warn" (click)=clickCancelar()>Cancelar</button>
+</p>

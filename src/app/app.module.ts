@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 //importaciones propias
 import {AccesoModule} from './acceso/acceso.module';
 import { PruebaComponent } from './prueba/prueba.component';
-import { ComponentesCompartidosModule } from './componentes-compartidos/componentes-compartidos.module'
+import { ComponentesCompartidosModule } from './componentes-compartidos/componentes-compartidos.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ComponentesCompartidosModule } from './componentes-compartidos/componen
     BrowserModule,
     AppRoutingModule,
     AccesoModule,
-    ComponentesCompartidosModule
+    ComponentesCompartidosModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
