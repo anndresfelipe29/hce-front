@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.sass']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  
+  @Input() rutas;
+  //searchResults= [{nombre:"Inicio", url:"prueba"},];
+
 
   constructor() { }
 
   ngOnInit(): void {
+    
+   
   }
+
+ /* prueba(){
+    alert("header");
+    return "/prueba";
+  }*/
 
 }

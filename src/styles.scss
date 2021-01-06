@@ -2,6 +2,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+@import './theme.scss';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,7 +13,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$hce-primary: mat-palette($mat-blue-grey);
+$hce-primary: mat-palette($mat-hce-primary);
 $hce-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
@@ -26,7 +27,8 @@ $hce-theme: mat-light-theme($hce-primary, $hce-accent, $hce-warn);
 // that you are using.
 @include angular-material-theme($hce-theme);
 
-/* You can add global styles to this file, and also import other style files */
+
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

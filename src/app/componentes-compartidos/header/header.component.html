@@ -1,5 +1,22 @@
-<header>
+<!--<header>
     <mat-toolbar color="primary">
             <span>HCE</span>
     </mat-toolbar>
 </header>
+-->
+
+<mat-toolbar color="primary" class="header">
+    <div>HCE</div>
+
+    <div class="header-button" fxShow="true" fxHide.lt-md fxFlex fxLayout>
+        <ul>
+            <!--<li>
+                <a mat-button [routerLink]="['/']"> Inicio </a>
+            </li>-->
+            <li *ngFor="let resultado of rutas;">           
+                <a mat-button [routerLink]="[resultado.url]"> {{resultado.nombre}} </a>
+            </li>
+        </ul>
+    </div>
+
+</mat-toolbar>

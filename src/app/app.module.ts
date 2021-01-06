@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 //importaciones propias
 import {AccesoModule} from './acceso/acceso.module';
@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     AppComponent,
     PruebaComponent
   ],
-  imports: [
+  imports: [  
     BrowserModule,
     AppRoutingModule,
     AccesoModule,

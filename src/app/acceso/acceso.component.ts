@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccesoComponent implements OnInit {
 
+  rutas = [
+    {
+      nombre: "Regresar",
+      url: "../prueba"
+    },
+    
+  ];
+
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  prueba(){
+    alert("salir");
   }
 
 }
