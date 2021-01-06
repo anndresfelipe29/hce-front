@@ -11,10 +11,11 @@ import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { RegistrarComponent } from './registrar/registrar.component';
 
 
 @NgModule({
-  declarations: [LoginComponent, AccesoComponent],
+  declarations: [LoginComponent, AccesoComponent, RegistrarComponent],
   imports: [
     CommonModule,
     AccesoRoutingModule,
