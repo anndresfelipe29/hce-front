@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 //importaciones propias
@@ -15,11 +17,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     PruebaComponent
   ],
   imports: [  
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     AccesoModule,
     ComponentesCompartidosModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
