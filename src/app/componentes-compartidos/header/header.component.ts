@@ -18,6 +18,9 @@ export class HeaderComponent implements OnInit {
    
   }
 
+  salir(){
+    
+  }
  /* prueba(){
     alert("header");
     return "/prueba";

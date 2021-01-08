@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import {AccesoModule} from './acceso/acceso.module';
 import { PruebaComponent } from './prueba/prueba.component';
 import { ComponentesCompartidosModule } from './componentes-compartidos/componentes-compartidos.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthorizatedGuard } from './logic/services/login/GuardAutorizaciones.guard';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PruebaComponent
+    PruebaComponent,
   ],
   imports: [  
     CommonModule,
@@ -26,7 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthorizatedGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

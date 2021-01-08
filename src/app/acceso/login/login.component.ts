@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators, FormGroup, FormBuilder } from "@angular/forms";
+import { Router, CanActivate } from '@angular/router';
+import { AlmacenamientoSesionService } from '../../logic/services/login/almacenamiento-sesion.service';
+import { LoginService } from '../../logic/services/login/login.service';
+import { Sesion } from '../../logic/models/sesion.model';
+import { LoginObject } from '../../logic/models/login.model';
+
 
 @Component({
   selector: 'app-login',
@@ -7,32 +14,42 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class LoginComponent implements OnInit {
-  hide=true;
-  constructor() { }
+
+  public loginForm: FormGroup;
+  public submitted: Boolean = false;
+  public error: { code: number, message: string } = null;
+
+  hide = true;
+  //constructor(){}
+  constructor(private formBuilder: FormBuilder,
+    private authenticationService: LoginService,
+    private storageService: AlmacenamientoSesionService,
+    private router: Router) { }
 
   ngOnInit(): void {
-    localStorage.setItem("Nombre", "pipe");
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+    })
+
   }
 
-  clickAceptar(){
-    let usuario = (<HTMLInputElement>document.getElementById("usuario")).value;
-    let password = (<HTMLInputElement>document.getElementById("password")).value;
-    if(usuario==''){
-      alert("Ingrese usuario");
-    }
-    else{
-      if(password==''){
-        alert("Ingrese contraseña");
-      }
-      else{
-          console.log('funciona');
-          //pasar datos a back
-      }
+  public submitLogin(): void {
+    this.submitted = true;
+    this.error = null;
+    if (this.loginForm.valid) {
+      this.authenticationService.inicioSesion(new LoginObject(this.loginForm.value)).subscribe(
+        data => this.correctLogin(data),
+        //error => this.error = JSON.parse(error._body)
+      )
+
     }
   }
 
-  clickCancelar(){
-    //
+  private correctLogin(data: Sesion) {
+    this.storageService.setSesionACtual(data);
+    this.router.navigate(['../principal']);
   }
+
 
 }

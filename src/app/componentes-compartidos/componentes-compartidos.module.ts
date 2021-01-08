@@ -6,17 +6,19 @@ import { HeaderComponent } from './header/header.component';
 //material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MenuComponent } from './menu/menu.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent],
+  declarations: [FooterComponent, HeaderComponent, MenuComponent],
   imports: [
     RouterModule,
     CommonModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    
   ],
-  exports:[FooterComponent,HeaderComponent,] //,MatToolbarModule
+  exports:[FooterComponent,HeaderComponent,MenuComponent,] //,MatToolbarModule
 })
 export class ComponentesCompartidosModule { }
