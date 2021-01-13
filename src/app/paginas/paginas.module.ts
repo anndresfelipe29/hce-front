@@ -5,6 +5,11 @@ import { PaginasRoutingModule } from './paginas-routing.module';
 import { PaginasComponent } from './paginas.component';
 import { ComponentesCompartidosModule } from '../componentes-compartidos/componentes-compartidos.module';
 
+//material
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+
+
 
 @NgModule({
   declarations: [PaginasComponent],
@@ -12,6 +17,8 @@ import { ComponentesCompartidosModule } from '../componentes-compartidos/compone
     CommonModule,
     PaginasRoutingModule,
     ComponentesCompartidosModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   exports:[
     ComponentesCompartidosModule,
