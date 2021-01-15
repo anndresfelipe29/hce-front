@@ -8,17 +8,20 @@ import { ComponentesCompartidosModule } from '../componentes-compartidos/compone
 //material
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { HistoriaCronologicaComponent } from './historia-cronologica/historia-cronologica.component';
 
 
 
 @NgModule({
-  declarations: [PaginasComponent],
+  declarations: [PaginasComponent, HistoriaCronologicaComponent],
   imports: [
     CommonModule,
     PaginasRoutingModule,
     ComponentesCompartidosModule,
     MatSidenavModule,
     MatListModule,
+    MatIconModule,
   ],
   exports:[
     ComponentesCompartidosModule,

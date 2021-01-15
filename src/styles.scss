@@ -4,6 +4,7 @@
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 @import './theme.scss';
+@include mat-core();
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -15,21 +16,24 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $hce-primary: mat-palette($mat-hce-primary);
-$hce-accent: mat-palette($mat-pink, A200, A100, A400);
+$hce-accent: mat-palette($mat-pink);
 
 // The warn palette is optional (defaults to red).
 $hce-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$hce-theme: mat-light-theme($hce-primary, $hce-accent, $hce-warn);
+$hce-theme-light: mat-light-theme($hce-primary, $hce-accent, $hce-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($hce-theme);
-
+@include angular-material-theme($hce-theme-light);
+//@include custom-components-theme($hce-theme-light);
 
 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//@include mat-sidenav-container-theme($hce-theme-light);
+@include mat-sidenav-theme($hce-theme-light);
