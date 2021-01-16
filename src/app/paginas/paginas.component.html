@@ -11,21 +11,17 @@
 
         </div>
 
-        <div>
-
-        </div>
+       
         <mat-nav-list>
-            <mat-list-item *ngFor="let ruta of rutas">
-                <div class="menu" color="warn">
+            <mat-list-item *ngFor="let ruta of rutasMenu">
+               
                     <a class="mat-h3 objetos" [routerLink]="[ruta.url]">
-                        <mat-icon aria-hidden="false" aria-label="">home</mat-icon>
+                        <mat-icon aria-hidden="false" aria-label="">{{ruta.icono}}</mat-icon>
                         {{ruta.nombre}}
                     </a>
-                    
-                </div>
+
+               
             </mat-list-item>
-
-
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content opened="true">

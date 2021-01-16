@@ -7,30 +7,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginasComponent implements OnInit {
 
-  fillerNav= ["Inicio","Usuario","Historia Clinica","Dar acceso","Configuración",];
+  fillerNav= ["Usuario","Historia Clinica","Dar acceso","Configuración","5sdsdsdsfsdfsfsdsdsds", "texto del menu", "texto super completo muy largo"];
 
   rutas = [
     {
+      nombre: "salir",
+      url: "../prueba"
+    },
+    
+  ];
+
+  rutasMenu = [
+    {
       nombre: "Inicio",
-      url: "./prueba"
+      url: "./prueba",
+      icono: "home",
     },
     { 
       nombre: "Usuario",
-      url:"./prueba"
+      url:"./prueba",
+      icono: "account_circle",
     },
     { 
       nombre: "Historia Clinica",
-      url:"./historia-cronologica"
+      url:"./historia-cronologica",
+      icono: "assignment",
     },
     { 
       nombre: "Dar acceso",
-      url:"./prueba"
+      url:"./prueba",
+      icono: "input",
     },
     { 
       nombre: "Configuración",
-      url:"./prueba"
-    },
-    
+      url:"./prueba",
+      icono: "settings",
+    },    
   ];
 
   constructor() { }
