@@ -12,12 +12,13 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { AntecedentesComponent } from './historia-clinica/antecedentes/antecedentes.component';
+import { AntecedentesNoPatologicosComponent } from './historia-clinica/antecedentes/antecedentes.component';
+import { AntecedentesSocialesComponent } from './historia-clinica/antecedentes-sociales/antecedentes-sociales.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, DatosPersonalesComponent, AntecedentesComponent,],
+  declarations: [FooterComponent, HeaderComponent, DatosPersonalesComponent, AntecedentesNoPatologicosComponent, AntecedentesSocialesComponent,],
   imports: [
     RouterModule,
     CommonModule,
@@ -29,6 +30,6 @@ import { AntecedentesComponent } from './historia-clinica/antecedentes/anteceden
     MatExpansionModule,
     
   ],
-  exports:[FooterComponent,HeaderComponent,DatosPersonalesComponent, AntecedentesComponent] //,MatToolbarModule
+  exports:[FooterComponent,HeaderComponent,DatosPersonalesComponent, AntecedentesNoPatologicosComponent,AntecedentesSocialesComponent] //,MatToolbarModule
 })
 export class ComponentesCompartidosModule { }
