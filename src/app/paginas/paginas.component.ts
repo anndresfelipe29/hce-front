@@ -34,6 +34,11 @@ export class PaginasComponent implements OnInit {
       icono: "assignment",
     },
     { 
+      nombre: "Agregar Registro HC",
+      url:"./agregar-registro",
+      icono: "assignment",
+    },
+    { 
       nombre: "Dar acceso",
       url:"./prueba",
       icono: "input",

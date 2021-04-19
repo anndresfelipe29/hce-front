@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PaginasComponent } from './paginas.component';
 import { PruebaComponent } from '../prueba/prueba.component';
 import {HistoriaCronologicaComponent} from './historia-cronologica/historia-cronologica.component';
+import { AgregarRegistroHistoriaClinicaComponent } from './agregar-registro-historia-clinica/agregar-registro-historia-clinica.component';
 
 const routes: Routes = [{
   path: '',
@@ -15,6 +16,10 @@ const routes: Routes = [{
     {
       path: 'historia-cronologica',
       component: HistoriaCronologicaComponent,
+    },
+    {
+      path: 'agregar-registro',
+      component: AgregarRegistroHistoriaClinicaComponent,
     }
   ]
 },
