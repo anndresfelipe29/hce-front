@@ -12,4 +12,38 @@ export class AgregarRegistroHistoriaClinicaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  opciones = [
+    {
+      nombre: "Consulta médica",
+      url: "./prueba",
+      icono: "home",
+    },
+    { 
+      nombre: "Atención de urgencias",
+      url:"./prueba",
+      icono: "account_circle",
+    },
+    { 
+      nombre: "Solicitud de pruebas de laboratorio",
+      url:"./historia-cronologica",
+      icono: "assignment",
+    },
+    { 
+      nombre: "Resultados de pruebas de laboratorio",
+      url:"./agregar-registro",
+      icono: "assignment",
+    },
+    { 
+      nombre: "Inmunizaciones",
+      url:"./prueba",
+      icono: "input",
+    },
+    { 
+      nombre: "Configuración",
+      url:"./prueba",
+      icono: "settings",
+    },    
+  ];
+
+
 }

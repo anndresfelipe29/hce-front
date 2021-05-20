@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { PaginasRoutingModule } from './paginas-routing.module';
 import { PaginasComponent } from './paginas.component';
 import { ComponentesCompartidosModule } from '../componentes-compartidos/componentes-compartidos.module';
+import { AgregarRegistroModule} from '../agregar-registro/agregar-registro.module';
 
 //material
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -23,6 +24,7 @@ import { AgregarRegistroHistoriaClinicaComponent } from './agregar-registro-hist
     MatSidenavModule,
     MatListModule,
     MatIconModule,
+    AgregarRegistroModule,
   ],
   exports:[
     ComponentesCompartidosModule,

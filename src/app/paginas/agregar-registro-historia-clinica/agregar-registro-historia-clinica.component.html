@@ -1,1 +1,35 @@
-<p>agregar-registro-historia-clinica works!</p>
+
+ <!--<a class="mat-h3 objetos" [routerLink]="[ruta.url]">
+    <mat-icon class="objeto" aria-hidden="false" aria-label="">account_circle</mat-icon>
+    pipe
+</a>-->
+<div class="titulo mat-title">
+    Agregar registro a historia clínica
+</div>
+Elige uno de los siguientes registros a agregar:
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            Elige uno de los siguientes registros a agregar:
+        </div>
+        
+    </div>
+    <div class="row opciones">
+        <div class="col-md-2 pr-1" *ngFor="let opcion of opciones">
+            <a class="mat-h3 objetos" [routerLink]="[opcion.url]">
+                <mat-icon class="opcion-icon" aria-hidden="false" aria-label="pipe">{{opcion.icono}}</mat-icon>
+                <br>
+                {{opcion.nombre}}
+            </a>
+            
+        </div>
+
+    
+    </div>
+</div>
+
+
+<br>
+<mat-icon class="objeto" aria-hidden="false" aria-label="">account_circle</mat-icon>
+<app-agregar-consulta></app-agregar-consulta>
