@@ -16,7 +16,7 @@ import { AgregarRegistroHistoriaClinicaComponent } from './agregar-registro-hist
 
 
 @NgModule({
-  declarations: [PaginasComponent, HistoriaCronologicaComponent, AgregarRegistroHistoriaClinicaComponent],
+  declarations: [PaginasComponent, HistoriaCronologicaComponent],
   imports: [
     CommonModule,
     PaginasRoutingModule,

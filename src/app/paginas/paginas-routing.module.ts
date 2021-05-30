@@ -19,7 +19,8 @@ const routes: Routes = [{
     },
     {
       path: 'agregar-registro',
-      component: AgregarRegistroHistoriaClinicaComponent,
+      loadChildren: () => import('./agregar-registro-historia-clinica/agregar-registro-historia-clinica.module').then(m => m.AgregarRegistroHistoriaClinicaModule),
+      //component: AgregarRegistroHistoriaClinicaComponent,
     }
   ]
 },

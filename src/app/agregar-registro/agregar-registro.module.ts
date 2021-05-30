@@ -9,11 +9,13 @@ import { AgregarConsultaComponent } from './agregar-consulta/agregar-consulta.co
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button'
-
+import { MatButtonModule } from '@angular/material/button';
+import { MenuOpcionesComponent } from './menu-opciones/menu-opciones.component'
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
-  declarations: [AgregarConsultaComponent],
+  declarations: [AgregarConsultaComponent, MenuOpcionesComponent],
   imports: [
     CommonModule,
     AgregarRegistroRoutingModule,
@@ -21,6 +23,8 @@ import { MatButtonModule } from '@angular/material/button'
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatListModule,
+    MatIconModule,
     FormsModule
   ],
   exports: [AgregarConsultaComponent]
