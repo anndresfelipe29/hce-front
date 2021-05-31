@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PaginasComponent } from './paginas.component';
 import { PruebaComponent } from '../prueba/prueba.component';
 import {HistoriaCronologicaComponent} from './historia-cronologica/historia-cronologica.component';
-import { AgregarRegistroHistoriaClinicaComponent } from './agregar-registro-historia-clinica/agregar-registro-historia-clinica.component';
+
 
 const routes: Routes = [{
   path: '',

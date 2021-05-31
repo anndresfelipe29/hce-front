@@ -1,0 +1,109 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="title">Agregar procedimento quirúrgico</h2>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-3 pr-1">
+                                <mat-form-field appearance="fill" class="full">
+                                    <mat-label>Código del prestador de servicios:</mat-label>
+                                    <input matInput #message maxlength="256">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-5 ">
+                                <h4> Persona que atiende: </h4>
+                                <div class="">
+                                    Andrés Felipe Gómez Salinas
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+                                <h4> Fecha del procedimento: </h4>
+                                <div class="">
+                                    30 de mayo 2021
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Condición del paciente</mat-label>
+                                    <textarea matInput #message maxlength="256"> </textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="full">
+                                    <mat-label>Procedimiento: </mat-label>
+                                    <input matInput #message maxlength="256">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3 pr-1">
+                                <mat-form-field appearance="fill" class="middle">
+                                    <mat-label>Tipo de procedimiento</mat-label>
+                                    <mat-select required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let procedimento of tipoProcedimiento"
+                                            [value]="procedimento.name">
+                                            {{procedimento.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3 pr-1">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Clase de procedimiento</mat-label>
+                                    <mat-select required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let procedimento of claseProcedimiento"
+                                            [value]="procedimento.name">
+                                            {{procedimento.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Tipo de diagnóstico</mat-label>
+                                    <textarea matInput #message maxlength="256"> </textarea>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Diagnóstico </mat-label>
+                                    <textarea matInput #message maxlength="256"> </textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Diagnóstico previo:</mat-label>
+                                    <textarea matInput #message maxlength="256"> </textarea>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Diagnóstico posterior: </mat-label>
+                                    <textarea matInput #message maxlength="256"> </textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

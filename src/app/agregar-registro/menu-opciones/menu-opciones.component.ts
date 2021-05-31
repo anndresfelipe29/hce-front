@@ -19,8 +19,8 @@ export class MenuOpcionesComponent implements OnInit {
       icono: "health_and_safety",
     },
     { 
-      nombre: "Atención de urgencias",
-      url:"./prueba",
+      nombre: "Procedimiento quirurgico",
+      url:"./procedimiento-quirurgico",
       icono: "account_circle",
     },
     { 

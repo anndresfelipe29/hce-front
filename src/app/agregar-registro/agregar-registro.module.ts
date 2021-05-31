@@ -13,9 +13,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MenuOpcionesComponent } from './menu-opciones/menu-opciones.component'
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import { AgregarProcedimientoQuirurgicoComponent } from './agregar-procedimiento-quirurgico/agregar-procedimiento-quirurgico.component';
 
 @NgModule({
-  declarations: [AgregarConsultaComponent, MenuOpcionesComponent],
+  declarations: [AgregarConsultaComponent, MenuOpcionesComponent, AgregarProcedimientoQuirurgicoComponent],
   imports: [
     CommonModule,
     AgregarRegistroRoutingModule,
