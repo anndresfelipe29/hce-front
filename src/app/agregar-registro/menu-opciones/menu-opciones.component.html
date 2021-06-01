@@ -1,0 +1,26 @@
+<div class="titulo mat-title">
+    Agregar registro a historia clínica
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Elige una de las siguientes opciones:</h3> <br>
+        </div>
+        
+    </div>
+    <div class="row opciones">
+        <div class="col-md-2 pr-1" *ngFor="let opcion of opciones">
+            <a class="mat-h3 objetos" [routerLink]="[opcion.url]">
+                <mat-icon class="opcion-icon" aria-hidden="false" aria-label="pipe">{{opcion.icono}}</mat-icon>
+                <br>
+                {{opcion.nombre}}
+            </a>
+            
+        </div>
+
+    
+    </div>
+</div>

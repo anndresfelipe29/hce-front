@@ -23,6 +23,11 @@ export class PaginasComponent implements OnInit {
       url: "./prueba",
       icono: "home",
     },
+    {
+      nombre: "Buscar paciente",
+      url: "./buscar-usuario",
+      icono: "search",
+    },
     { 
       nombre: "Usuario",
       url:"./prueba",
@@ -31,6 +36,11 @@ export class PaginasComponent implements OnInit {
     { 
       nombre: "Historia Clinica",
       url:"./historia-cronologica",
+      icono: "assignment",
+    },
+    { 
+      nombre: "Agregar Registro HC",
+      url:"./agregar-registro",
       icono: "assignment",
     },
     { 
