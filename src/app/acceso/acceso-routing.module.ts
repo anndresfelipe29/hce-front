@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {AccesoComponent} from './acceso.component'
 import { LoginComponent } from './login/login.component';
 import { RegistrarComponent } from './registrar/registrar.component';
+import { CreacionPacienteComponent } from '../paginas/creacion-paciente/creacion-paciente.component';
 
 const routes: Routes = [{
   path:'',

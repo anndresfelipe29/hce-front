@@ -42,6 +42,11 @@ export class PaginasComponent implements OnInit {
       nombre: "Configuración",
       url:"./prueba",
       icono: "settings",
+    },
+    {
+      nombre:"Creacion",
+      url:"./creacion",
+      icono:"account_circle",
     },    
   ];
 

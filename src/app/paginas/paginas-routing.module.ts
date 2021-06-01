@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PaginasComponent } from './paginas.component';
 import { PruebaComponent } from '../prueba/prueba.component';
+import {CreacionPacienteComponent} from './creacion-paciente/creacion-paciente.component'
 import {HistoriaCronologicaComponent} from './historia-cronologica/historia-cronologica.component';
 
 const routes: Routes = [{
@@ -15,6 +16,10 @@ const routes: Routes = [{
     {
       path: 'historia-cronologica',
       component: HistoriaCronologicaComponent,
+    },
+    {
+      path:'creacion',
+      component:CreacionPacienteComponent,
     }
   ]
 },
