@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="title">Buscar usuario</h2>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <h4>Tipo de Documento:</h4>
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Tipo de documento</mat-label>
+                                    <mat-select required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let tipo of tipoDocumento" [value]="tipo.name">
+                                            {{tipo.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                    <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
+                                    </mat-error> -->
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 pr-1">
+                                <h4>Número de documento:</h4>                               
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Número de documento: </mat-label>
+                                    <input matInput #message maxlength="256">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Nombre</mat-label>
+                                    <input matInput #message maxlength="256">
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Apellido:</mat-label>
+                                    <input matInput #message maxlength="256">
+                                </mat-form-field>
+                            </div>
+                        </div>                                                          
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card"  *ngIf="resultado">
+                <div class="card-header">
+                    <h2 class="title">Resultados</h2>
+                </div>
+                <div class="card-body"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

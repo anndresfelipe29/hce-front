@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PaginasComponent } from './paginas.component';
 import { PruebaComponent } from '../prueba/prueba.component';
 import {HistoriaCronologicaComponent} from './historia-cronologica/historia-cronologica.component';
-
+import { BuscarUsuarioComponent} from './buscar-usuario/buscar-usuario.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,6 +16,10 @@ const routes: Routes = [{
     {
       path: 'historia-cronologica',
       component: HistoriaCronologicaComponent,
+    },
+    {
+      path: 'buscar-usuario',
+      component: BuscarUsuarioComponent,
     },
     {
       path: 'agregar-registro',

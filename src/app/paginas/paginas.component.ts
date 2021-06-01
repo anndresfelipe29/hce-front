@@ -23,6 +23,11 @@ export class PaginasComponent implements OnInit {
       url: "./prueba",
       icono: "home",
     },
+    {
+      nombre: "Buscar paciente",
+      url: "./buscar-usuario",
+      icono: "search",
+    },
     { 
       nombre: "Usuario",
       url:"./prueba",

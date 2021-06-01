@@ -11,19 +11,25 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { HistoriaCronologicaComponent } from './historia-cronologica/historia-cronologica.component';
-import { AgregarRegistroHistoriaClinicaComponent } from './agregar-registro-historia-clinica/agregar-registro-historia-clinica.component';
-
-
+import { BuscarUsuarioComponent } from './buscar-usuario/buscar-usuario.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [PaginasComponent, HistoriaCronologicaComponent],
+  declarations: [PaginasComponent, HistoriaCronologicaComponent, BuscarUsuarioComponent],
   imports: [
     CommonModule,
     PaginasRoutingModule,
     ComponentesCompartidosModule,
     MatSidenavModule,
-    MatListModule,
+    MatListModule, 
     MatIconModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
     AgregarRegistroModule,
   ],
   exports:[
