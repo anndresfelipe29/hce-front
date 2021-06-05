@@ -9,7 +9,6 @@
                     <form>
                         <div class="row">
                             <div class="col-md-6">
-                                <h4>Tipo de documento:</h4>
                                 <mat-form-field appearance="fill">
                                     <mat-label>Tipo de documento</mat-label>
                                     <mat-select required>
@@ -25,89 +24,87 @@
                             <div class="col-md-6">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Número de identificación: </mat-label>
-                                    <input matInput #message maxlength="256"> 
+                                    <input type="id" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 pr-1">
-                                <mat-form-field appearance="fill" class="text-area">
-                                    <mat-label>Número de identificación</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
-                                </mat-form-field>
-                            </div>
-
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Primer Nombre:</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input type="name" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 pr-1">
+                            <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Segundo nombre: </mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input type="name" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Primer apellido:</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input type="name" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Segundo apellido: </mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input type="name" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                         </div>
-                        <div class="col-md-6 pr-1">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Sexo</mat-label>
-                                <mat-select required>
-                                    <mat-option>--</mat-option>
-                                    <mat-option *ngFor="let tipo of sexo" [value]="tipo.name">
-                                        {{tipo.name}}
-                                    </mat-option>
-                                </mat-select>
-                                <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
+                        <div class="row">
+                            <div class="col-md-3 pr-1">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Sexo</mat-label>
+                                    <mat-select required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let tipo of sexo" [value]="tipo.name">
+                                            {{tipo.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                    <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
                             </mat-error> -->
-                            </mat-form-field>
-                        </div>
-                        <div class="col-md-6 pr-1">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Estado Civil</mat-label>
-                                <mat-select required>
-                                    <mat-option>--</mat-option>
-                                    <mat-option *ngFor="let tipo of estadoCivil" [value]="tipo.name">
-                                        {{tipo.name}}
-                                    </mat-option>
-                                </mat-select>
-                                <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3 pr-1">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Estado Civil</mat-label>
+                                    <mat-select required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let tipo of estadoCivil" [value]="tipo.name">
+                                            {{tipo.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                    <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
                           </mat-error> -->
-                            </mat-form-field>
-                        </div>
-                        <div class="col-md-6 pr-1">
-                            <mat-form-field>
-                                <mat-label>Fecha de nacimiento</mat-label>
-                                <input matInput [matDatepicker]="picker">
-                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                                <mat-datepicker #picker></mat-datepicker>
-                            </mat-form-field>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-3 pr-1">
+                                <mat-form-field>
+                                    <mat-label>Fecha de nacimiento</mat-label>
+                                    <input matInput [matDatepicker]="picker">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                </mat-form-field>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Ocupación</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input matInput #message maxlength="256">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill" class="text-area">
+                                    <mat-label>Teléfono</mat-label>
+                                    <input type="phone" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                         </div>
@@ -115,50 +112,46 @@
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Dirección</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input type="address" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
-                            <div class="col-md-6 pr-1">
-                                <mat-form-field appearance="fill" class="text-area">
-                                    <mat-label>Teléfono</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
-                                </mat-form-field>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Lugar de residencia</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input matInput #message maxlength="256">
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Aseguradora: </mat-label>
+                                    <mat-select required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let tipo of aseguradora" [value]="tipo.name">
+                                            {{tipo.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                    <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
+                              </mat-error> -->
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6 pr-1">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Tipo de vinculación: </mat-label>
+                                    <mat-select required>
+                                        <mat-option>--</mat-option>
+                                        <mat-option *ngFor="let tipo of tipoVinculacion" [value]="tipo.name">
+                                            {{tipo.name}}
+                                        </mat-option>
+                                    </mat-select>
+                                    <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
+                              </mat-error> -->
                                 </mat-form-field>
                             </div>
                         </div>
-                        <div class="col-md-6 pr-1">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Aseguradora: </mat-label>
-                                <mat-select required>
-                                    <mat-option>--</mat-option>
-                                    <mat-option *ngFor="let tipo of aseguradora" [value]="tipo.name">
-                                        {{tipo.name}}
-                                    </mat-option>
-                                </mat-select>
-                                <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
-                          </mat-error> -->
-                            </mat-form-field>
-                        </div>
-                        <div class="col-md-6 pr-1">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Tipo de vinculación: </mat-label>
-                                <mat-select required>
-                                    <mat-option>--</mat-option>
-                                    <mat-option *ngFor="let tipo of tipoVinculacion" [value]="tipo.name">
-                                        {{tipo.name}}
-                                    </mat-option>
-                                </mat-select>
-                                <!-- <mat-error *ngIf="animalControl.hasError('required')">Elija una especialidad
-                          </mat-error> -->
-                            </mat-form-field>
-                        </div>
+
                     </form>
                 </div>
             </div>
@@ -172,7 +165,7 @@
                             <div class="col-md-12 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Nombre: </mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input type="name" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                         </div>
@@ -180,13 +173,13 @@
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Telefono:</mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input type="phone" matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                             <div class="col-md-6 pr-1">
                                 <mat-form-field appearance="fill" class="text-area">
                                     <mat-label>Parentesco: </mat-label>
-                                    <textarea matInput #message maxlength="256"> </textarea>
+                                    <input matInput #message maxlength="256">
                                 </mat-form-field>
                             </div>
                         </div>
