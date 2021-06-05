@@ -25,6 +25,16 @@ export class CreacionPacienteComponent implements OnInit {
     {name:'Viudo'},
     {name:'Unión Libre'},
   ]
+/**Esto es mientras base de datps */
+  aseguradora = [
+    {name:'Seguritas'},
+    {name:'SaludGracias'}
+  ]
+
+  tipoVinculacion = [
+    {name:'Aportante'},
+    {name:'Beneficiario'}
+  ]
 
   constructor() { }
 
